@@ -31,6 +31,10 @@ router.get("/city-low-wholesale", (req, res) => {
   res.setHeader("Content-Type", "text/plain");
   res.send(custService.lowestWholeSale());
 });
+router.get("/city-high-retail", (req, res) => {
+  res.setHeader("Content-Type", "text/plain");
+  res.send(custService.highestRetail());
+});
 router.post("/cust", (req, res) => {
   var body = req.body;
   res.send(body);
